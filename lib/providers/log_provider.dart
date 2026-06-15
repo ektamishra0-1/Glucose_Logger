@@ -1,1 +1,1 @@
-
+class LogProvider {}

@@ -1,17 +1,35 @@
-# glucose_logger
+# Glucose Logger
 
-A new Flutter project.
+A simple and user-friendly Flutter application for recording, tracking, and exporting blood glucose readings.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Add blood glucose readings
+- Store readings locally
+- View historical glucose records
+- Export records as PDF
+- Clean and simple user interface
+- Works offline
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Tech Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter
+- Dart
+- Local Storage
+- PDF Generation
+
+## Installation
+
+### Prerequisites
+
+- Flutter SDK
+- Android Studio or VS Code
+- Android Emulator or Physical Device
+
+### Steps
+
+1. Clone the repository
+
+```bash
+git clone <repository-url>
