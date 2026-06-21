@@ -5,7 +5,7 @@ import '../../widgets/insight_card.dart';
 import '../logger/log_entry_sheet.dart';
 import '../../core/database/database_service.dart';
 import '../../models/glucose_log.dart';
-
+import '../../core/notifications/notification_service.dart';
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
 
@@ -84,7 +84,32 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
       drawer: const AppDrawer(),
 
-      appBar: AppBar(title: const Text("Glucose Logger")),
+      appBar: AppBar(
+  title: const Text("Glucose Logger"),
+
+  actions: [
+    IconButton(
+      icon: const Icon(Icons.notifications),
+
+      onPressed: () async {
+  await NotificationService.instance.scheduleDailyReminder(
+    id: 999,
+    title: 'Test Scheduled',
+    body: 'Scheduled notification works!',
+    hour: DateTime.now()
+        .add(const Duration(minutes: 2))
+        .hour,
+    minute: DateTime.now()
+        .add(const Duration(minutes: 2))
+        .minute,
+  );
+
+  await NotificationService.instance
+      .printPendingNotifications();
+}
+    ),
+  ],
+),
 
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
